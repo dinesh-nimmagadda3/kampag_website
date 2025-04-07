@@ -1,0 +1,62 @@
+/* Contact Form Styles */
+
+/* Error styling */
+.error {
+  border-color: #dc3545 !important;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Success message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+/* Form message animations */
+.form-message {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Disable styling for the submit button */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Focused input styling */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(71, 86, 161, 0.2);
+  outline: none;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  position: relative;
+}
+
+.checkbox-group .error-message {
+  margin-left: 25px;
+}

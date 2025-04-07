@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Kampag Comprehensive IT Services</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Contact Kampag IT Services for professional IT solutions, cloud services, data analytics, and digital transformation to enhance your business efficiency."
+    />
+    <meta
+      name="keywords"
+      content="IT services contact, IT consulting contact, IT support, reach out, business technology help"
+    />
+    <meta name="author" content="Kampag IT Services" />
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Contact Kampag IT Services" />
+    <meta
+      property="og:description"
+      content="Get in touch with our team for professional IT services tailored to enhance your business."
+    />
+    <meta property="og:image" content="images/kampog-Logo-01.png" />
+    <meta property="og:url" content="https://kampag.co.uk/contact.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Kampag IT Services" />
+    <meta
+      name="twitter:description"
+      content="Get in touch with our team for professional IT services tailored to enhance your business."
+    />
+    <meta name="twitter:image" content="images/kampog-Logo-01.png" />
+
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://kampag.co.uk/contact.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact-form.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag Comprehensive IT Services"
+              />
+            </a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+          </div>
+          <div
+            class="hamburger"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="banner-overlay"></div>
+      <div class="container">
+        <div class="banner-content">
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p>
+            Have a project in mind or a question about our services? We'd love
+            to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Address</h3>
+                <p>
+                  Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:info@kampag.co.uk">info@kampag.co.uk</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form id="contact-form" action="submit-form.php" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    data-error-message="Please enter your name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    data-error-message="Please enter a valid email address"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  data-error-message="Please enter a subject"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  data-error-message="Please enter your message"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <div class="checkbox-group">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    required
+                    data-error-message="You must agree to our privacy policy"
+                  />
+                  <label for="privacy"
+                    >I agree to the
+                    <a href="privacy-policy.html">privacy policy</a></label
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2493.089076175896!2d0.5856389!3d51.5240556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8d919af5a20a7%3A0xbf833bfca82b7d96!2s101-103%20Furtherwick%20Rd%2C%20Canvey%20Island%20SS8%207AT!5e0!3m2!1sen!2suk!4v1649325461542!5m2!1sen!2suk"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag comprehensive IT services"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              Kampag comprehensive IT services outsourcing is the perfect fit
+              for our clients. Our broad expertise expands the IT capabilities
+              of these companies, giving them technology that fits their
+              business and supports their business success and growth.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <div class="underline"></div>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <div class="underline"></div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p><a href="mailto:info@kampag.co.uk">info@kampag.co.uk</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                <a
+                  href="https://maps.google.com/?q=Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT"
+                  target="_blank"
+                >
+                  Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT
+                </a>
+              </p>
+            </div>
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Kampag IT Services. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Kampag IT Services",
+        "description": "Get in touch with Kampag IT Services for tailored IT solutions for your business.",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Kampag IT Services",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit 5, 101-103 Furtherwick Road",
+            "addressLocality": "Canvey Island",
+            "addressRegion": "Essex",
+            "postalCode": "SS8 7AT",
+            "addressCountry": "UK"
+          },
+          "email": "info@kampag.co.uk",
+          "url": "https://kampag.co.uk",
+          "sameAs": ["https://www.linkedin.com/company/kampag"]
+        }
+      }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script src="js/contact.js"></script>
+  </body>
+</html>

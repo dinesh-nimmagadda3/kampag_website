@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Kampag Comprehensive IT Services</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Learn about Kampag IT Services, our mission, and our commitment to providing top-tier IT solutions to transform and enhance your business."
+    />
+    <meta
+      name="keywords"
+      content="about kampag, it services company, digital transformation, IT outsourcing, IT management, business solutions"
+    />
+    <meta name="author" content="Kampag IT Services" />
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="About Kampag IT Services" />
+    <meta
+      property="og:description"
+      content="Learn about our mission to provide comprehensive IT solutions that transform businesses in the digital age."
+    />
+    <meta property="og:image" content="images/kampog-Logo-01.png" />
+    <meta property="og:url" content="https://kampag.co.uk/about.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Kampag IT Services" />
+    <meta
+      name="twitter:description"
+      content="Learn about our mission to provide comprehensive IT solutions that transform businesses in the digital age."
+    />
+    <meta name="twitter:image" content="images/kampog-Logo-01.png" />
+
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://kampag.co.uk/about.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Additional styling for about page */
+      .about-section {
+        padding: var(--spacing-3xl) 0;
+      }
+
+      .about-intro {
+        margin-bottom: var(--spacing-2xl);
+      }
+
+      .about-intro .container {
+        max-width: 900px;
+      }
+
+      .about-intro h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+      }
+
+      .about-intro p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: var(--spacing-md);
+        text-align: justify;
+      }
+
+      .company-mission {
+        background-color: var(--bg-light);
+        padding: var(--spacing-2xl) 0;
+      }
+
+      .mission-content {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xl);
+      }
+
+      .mission-text {
+        flex: 0 0 60%;
+      }
+
+      .mission-text h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .mission-text p {
+        line-height: 1.7;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .mission-image {
+        flex: 0 0 40%;
+      }
+
+      .mission-image img {
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        width: 100%;
+      }
+
+      .service-highlight {
+        padding: var(--spacing-2xl) 0;
+      }
+
+      .highlight-container {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xl);
+      }
+
+      .highlight-image {
+        flex: 0 0 40%;
+      }
+
+      .highlight-image img {
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        width: 100%;
+      }
+
+      .highlight-text {
+        flex: 0 0 60%;
+      }
+
+      .highlight-text h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .highlight-text p {
+        line-height: 1.7;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .cta-section {
+        background: linear-gradient(90deg, #6a11cb 0%, #8e54e9 100%);
+        color: white;
+        padding: var(--spacing-xl) 0;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .cta-section .btn-primary {
+        margin-top: var(--spacing-md);
+      }
+
+      @media (max-width: 992px) {
+        .mission-content,
+        .highlight-container {
+          flex-direction: column;
+        }
+
+        .mission-text,
+        .highlight-text,
+        .mission-image,
+        .highlight-image {
+          flex: 0 0 100%;
+        }
+
+        .mission-image,
+        .highlight-image {
+          order: -1;
+          margin-bottom: var(--spacing-lg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag Comprehensive IT Services"
+              />
+            </a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" class="active">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div
+            class="hamburger"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="margin-top: 80px">
+      <div class="banner-overlay"></div>
+      <div class="container">
+        <div class="banner-content">
+          <h1>About Us</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Intro Section -->
+    <section class="about-intro">
+      <div class="container">
+        <h2>KAMPAG LIMITED</h2>
+        <p class="text-justified">
+          To meet the challenges as well as the standards of the rapidly
+          Digitally Transforming modern world, we at Kampag excel at providing
+          innovative IT solutions. Based in London, UK, we specialize in
+          adapting smart solutions and transforming the way businesses operate
+          by providing access to technologies and software that make existing
+          solutions smarter and more efficient.
+        </p>
+        <p class="text-justified">
+          We are experts in IT Outsourcing and Management Services, with a broad
+          range of services including Information Technology outsourcing,
+          globalization, and comprehensive support solutions. Our expertise and
+          capability to deliver custom-made solutions based on the specific
+          requirements of our clients is what sets Kampag apart in the field of
+          IT Outsourcing and Management.
+        </p>
+        <p class="text-justified">
+          Our certified experts design and implement solutions based on the
+          needs of the client and their organization, assisting them through a
+          wide range of services such as Network Maintenance, Disaster Recovery
+          Planning, Management Asset Management, and Consulting, paired with our
+          exceptional customer support services.
+        </p>
+        <p class="text-justified">
+          Transform your company digitally and leverage the latest solutions to
+          grow your business together with Kampag's services.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Mission Section -->
+    <section class="company-mission">
+      <div class="container">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h2>Perfect Service for IT Relocation</h2>
+            <p class="text-justified">
+              The relocation process can be a perfect opportunity to assess the
+              current requirements in your IT department related to data
+              backups, network management, as well as hardware infrastructure.
+            </p>
+            <p class="text-justified">
+              Our experts will analyze your current setup to provide you with
+              solutions that can help you decide what to invest in upgrading or
+              preserving during the relocation. This approach can help companies
+              upgrade or ensure stable operation of existing solutions without
+              any hassles.
+            </p>
+            <p class="text-justified">
+              We make better IT Solutions & Services available at your
+              fingertips, ensuring a smooth transition and minimal disruption to
+              your business operations.
+            </p>
+            <a href="services.html" class="btn">LEARN MORE</a>
+          </div>
+          <div class="mission-image">
+            <img
+              src="images/business-brainstorming-graph-chart-report-data-concept-min.jpg"
+              alt="IT Relocation Services"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Highlight Section -->
+    <section class="service-highlight">
+      <div class="container">
+        <div class="highlight-container">
+          <div class="highlight-image">
+            <img
+              src="images/meeting-mature-office-showing-presenter-min.jpg"
+              alt="IT Solutions and Services"
+              loading="lazy"
+            />
+          </div>
+          <div class="highlight-text">
+            <h2>Assuring Success</h2>
+            <p class="text-justified">
+              Kampag can provide your company with solutions to upgrade existing
+              technologies or help set up new systems from scratch. We transform
+              businesses by harnessing the power of digital data and efficient
+              IT management.
+            </p>
+            <p class="text-justified">
+              Our consultants track projects throughout various stages,
+              documenting, analyzing, and presenting optimal solutions that can
+              be used for further development and improvements. This approach
+              helps remove major roadblocks and ensures timely delivery of
+              projects.
+            </p>
+            <p class="text-justified">
+              We're here to help grow your business by providing comprehensive
+              IT solutions tailored to your specific needs and requirements.
+            </p>
+            <a href="contact.html" class="btn">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Looking for the Best IT Business Solutions?</h2>
+        <p>
+          Let us help you transform your business with our comprehensive IT
+          services and solutions.
+        </p>
+        <div style="margin-top: 30px">
+          <a href="contact.html" class="btn-primary">CONTACT US</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag comprehensive IT services"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              Kampag comprehensive IT services outsourcing is the perfect fit
+              for our clients. Our broad expertise expands the IT capabilities
+              of these companies, giving them technology that fits their
+              business and supports their business success and growth.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <div class="underline"></div>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <div class="underline"></div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p><a href="mailto:info@kampag.co.uk">info@kampag.co.uk</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                <a
+                  href="https://maps.google.com/?q=Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT"
+                  target="_blank"
+                >
+                  Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT
+                </a>
+              </p>
+            </div>
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Kampag IT Services. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://kampag.co.uk/about.html"
+        },
+        "headline": "About Kampag IT Services",
+        "description": "Learn about Kampag IT Services, our mission, and our commitment to providing top-tier IT solutions to transform and enhance your business.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Kampag IT Services",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "images/kampog-Logo-01.png"
+          }
+        }
+      }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

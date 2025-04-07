@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Kampag Comprehensive IT Services</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Explore Kampag IT Services' comprehensive range of solutions including technical consulting, cloud solutions, corporate relocation, and data analytics."
+    />
+    <meta
+      name="keywords"
+      content="IT services, technical consulting, cloud solutions, corporate relocation, data analytics, IT support, business technology"
+    />
+    <meta name="author" content="Kampag IT Services" />
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Services - Kampag IT Services" />
+    <meta
+      property="og:description"
+      content="Explore our comprehensive range of IT solutions including technical consulting, cloud solutions, and data analytics."
+    />
+    <meta property="og:image" content="images/kampog-Logo-01.png" />
+    <meta property="og:url" content="https://kampag.co.uk/services.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Services - Kampag IT Services" />
+    <meta
+      name="twitter:description"
+      content="Explore our comprehensive range of IT solutions including technical consulting, cloud solutions, and data analytics."
+    />
+    <meta name="twitter:image" content="images/kampog-Logo-01.png" />
+
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://kampag.co.uk/services.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Additional styling for services page */
+      .services-intro-section {
+        padding: var(--spacing-3xl) 0;
+        background-color: white;
+      }
+
+      .services-intro-container {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xl);
+      }
+
+      .services-intro-image {
+        flex: 0 0 40%;
+      }
+
+      .services-intro-image img {
+        width: 100%;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+      }
+
+      .services-intro-text {
+        flex: 0 0 60%;
+      }
+
+      .services-intro-text h2 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-md);
+        font-weight: 700;
+      }
+
+      .services-intro-text p {
+        line-height: 1.7;
+        margin-bottom: var(--spacing-md);
+        text-align: justify;
+      }
+
+      /* Updated CSS for service categories section */
+      .services-categories {
+        padding: var(--spacing-md) 0 0 0; /* Remove bottom padding completely */
+        background-color: #f6f8fd;
+        margin-bottom: 0;
+      }
+
+      .categories-container {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .category-button {
+        flex: 1;
+        padding: 15px 20px;
+        color: #5c5c5c;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        position: relative; /* For active indicator */
+        margin-bottom: 0;
+      }
+
+      .category-button i {
+        margin-right: 10px;
+        font-size: 1.1rem;
+      }
+
+      .category-button.active {
+        background-color: #4756a1; /* Primary color */
+        color: white;
+      }
+
+      /* Add triangle indicator for active button */
+      .category-button.active::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #4756a1; /* Same color as active button */
+        z-index: 10;
+      }
+
+      /* Updated service details section */
+      .service-details {
+        padding: 0 0 var(--spacing-2xl);
+        background-color: #f6f8fd;
+      }
+
+      .service-detail-container {
+        display: none; /* Hide all by default */
+        border: 1px solid #e0e0e0;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-xl);
+        background-color: white;
+        box-shadow: var(--shadow-sm);
+        margin-top: 0; /* Reduced margin to close the gap */
+      }
+
+      .service-detail-container.active {
+        display: block; /* Show only active container */
+      }
+
+      /* Responsive styles */
+      @media (max-width: 992px) {
+        .categories-container {
+          flex-wrap: wrap;
+        }
+
+        .category-button {
+          flex: 1 0 40%;
+          margin-bottom: 10px;
+        }
+
+        .category-button.active::after {
+          display: none; /* Hide indicator on mobile */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .categories-container {
+          flex-direction: column;
+        }
+
+        .category-button {
+          width: 100%;
+        }
+      }
+
+      .service-detail-content p {
+        margin-bottom: var(--spacing-md);
+        line-height: 1.7;
+        text-align: justify;
+      }
+
+      .service-detail-content ul {
+        margin-bottom: var(--spacing-md);
+        padding-left: var(--spacing-lg);
+      }
+
+      .service-detail-content li {
+        margin-bottom: var(--spacing-xs);
+        line-height: 1.7;
+      }
+
+      .service-detail-content h3 {
+        color: var(--primary-color);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-sm);
+        font-size: 1.3rem;
+      }
+
+      .cta-section {
+        background: linear-gradient(90deg, #6a11cb 0%, #8e54e9 100%);
+        color: white;
+        padding: var(--spacing-xl) 0;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .cta-section .btn-primary {
+        margin-top: var(--spacing-md);
+      }
+
+      @media (max-width: 992px) {
+        .services-intro-container {
+          flex-direction: column-reverse;
+        }
+
+        .services-intro-image,
+        .services-intro-text {
+          flex: 0 0 100%;
+        }
+
+        .categories-container {
+          flex-direction: column;
+        }
+
+        .category-button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag Comprehensive IT Services"
+              />
+            </a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html" class="active">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div
+            class="hamburger"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="margin-top: 80px">
+      <div class="banner-overlay"></div>
+      <div class="container">
+        <div class="banner-content">
+          <h1>SERVICES</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Introduction Section -->
+    <section class="services-intro-section">
+      <div class="container">
+        <div class="services-intro-container">
+          <div class="services-intro-image">
+            <img
+              src="images/service1-02.jpg"
+              alt="IT Professional working with client"
+              loading="lazy"
+            />
+          </div>
+          <div class="services-intro-text">
+            <h2>THE BEST TECH SOLUTIONS FOR OUR CUSTOMERS</h2>
+            <p class="text-justified">
+              The modern technology especially the Information Technology based
+              solutions has radically transformed the way business function and
+              operate as many once diverse to complex problems can now be solved
+              using technology to save time, improve the efficiency as well as
+              the productivity of the business and Kampag Consultants can step
+              in to provide all those necessary services to shape your business
+              technologically.
+            </p>
+            <p class="text-justified">
+              Removing the stress and providing our clients with a hassle free
+              experience through our certified IT professionals and consultants
+              who are experts and adept at handling various IT-related services
+              of your company right from consulting to monitoring as well as
+              management with improvisations or new solutions which cater to the
+              specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Categories Section with updated styling -->
+    <section class="services-categories">
+      <div class="container">
+        <div class="categories-container">
+          <button
+            class="category-button active"
+            data-target="technical-consulting"
+          >
+            <i class="fas fa-laptop-code"></i> TECHNICAL CONSULTING
+          </button>
+          <button class="category-button" data-target="cloud-solutions">
+            <i class="fas fa-cloud"></i> CLOUD SOLUTIONS
+          </button>
+          <button class="category-button" data-target="corporate-relocation">
+            <i class="fas fa-building"></i> CORPORATE RELOCATION
+          </button>
+          <button class="category-button" data-target="data-analytics">
+            <i class="fas fa-chart-line"></i> DATA ANALYTICS
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details">
+      <div class="container">
+        <div class="service-detail-container active" id="technical-consulting">
+          <div class="service-detail-content">
+            <h3>Technical Consulting Services</h3>
+            <p class="text-justified">
+              Kampag's technical consultants through Staff Augmentation are more
+              than their mere support or temporary replacement resources as they
+              are equipped with the professional experience and knowledge to
+              deal with various situations such as large scale projects which
+              might be implementing and integrating a new technology and in this
+              process Kampag's technical consultants can assist in evaluating
+              the current environment to plan and provide you with solutions
+              which can solve the current problem as well as they are long
+              lasting.
+            </p>
+            <p class="text-justified">
+              Our technical consultants are adept at handling and providing
+              services in:
+            </p>
+            <ul>
+              <li>Active Directory</li>
+              <li>BI Tools</li>
+              <li>Citrix</li>
+              <li>Compliance</li>
+              <li>Data Warehousing</li>
+              <li>Disaster Recovery</li>
+              <li>Exchange</li>
+              <li>.NET</li>
+              <li>Oracle ERP</li>
+              <li>Oracle Fusion Middleware</li>
+              <li>Oracle SOA & Identity Management</li>
+              <li>SharePoint</li>
+              <li>Security Audits</li>
+              <li>SQL</li>
+              <li>Office 365/Azure & SaaS</li>
+            </ul>
+            <p class="text-justified">
+              Our experts have worked with organizations of all sizes, from
+              small businesses to large enterprises, and have the knowledge and
+              experience to help your business leverage technology to achieve
+              its goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-detail-container" id="cloud-solutions">
+          <div class="service-detail-content">
+            <h3>Cloud Solutions</h3>
+            <p class="text-justified">
+              Kampag offers comprehensive cloud solutions to help businesses
+              leverage the power and flexibility of cloud computing. Our cloud
+              services are designed to enhance operational efficiency, reduce
+              costs, and enable seamless scalability to meet your growing
+              business needs.
+            </p>
+            <p class="text-justified">Our cloud solutions include:</p>
+            <ul>
+              <li>Cloud Strategy & Consulting</li>
+              <li>Cloud Migration Services</li>
+              <li>Public, Private, and Hybrid Cloud Solutions</li>
+              <li>Cloud Infrastructure Management</li>
+              <li>Cloud Security & Compliance</li>
+              <li>Disaster Recovery as a Service (DRaaS)</li>
+              <li>SaaS Implementation & Integration</li>
+              <li>Cloud Cost Optimization</li>
+              <li>Microsoft Azure Services</li>
+              <li>AWS Cloud Services</li>
+              <li>Google Cloud Platform Solutions</li>
+            </ul>
+            <p class="text-justified">
+              Our experienced cloud specialists work closely with your team to
+              understand your business requirements and design cloud solutions
+              that align with your strategic objectives. Whether you're looking
+              to migrate to the cloud for the first time or optimize your
+              existing cloud infrastructure, Kampag has the expertise to guide
+              you through every step of your cloud journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-detail-container" id="corporate-relocation">
+          <div class="service-detail-content">
+            <h3>Corporate Relocation IT Services</h3>
+            <p class="text-justified">
+              Moving your business to a new location presents both challenges
+              and opportunities for your IT infrastructure. Kampag provides
+              comprehensive IT relocation services to ensure a smooth transition
+              with minimal disruption to your operations.
+            </p>
+            <p class="text-justified">
+              Our corporate relocation services include:
+            </p>
+            <ul>
+              <li>Pre-Move IT Assessment & Planning</li>
+              <li>Infrastructure Design for New Location</li>
+              <li>Network Planning & Implementation</li>
+              <li>Server & Data Center Relocation</li>
+              <li>Secure Data Migration</li>
+              <li>Hardware Decommissioning & Deployment</li>
+              <li>Cabling & Physical Infrastructure Setup</li>
+              <li>Post-Move Testing & Validation</li>
+              <li>Business Continuity During Transition</li>
+              <li>IT Equipment Inventory Management</li>
+              <li>Vendor Coordination for IT Services</li>
+            </ul>
+            <p class="text-justified">
+              Our experienced team handles all aspects of your IT relocation,
+              from initial planning to final implementation. We work closely
+              with your internal stakeholders and other move partners to ensure
+              all technology assets are relocated safely and efficiently.
+              Kampag's relocation specialists minimize downtime and risk while
+              maximizing the opportunity to optimize your IT infrastructure for
+              future business needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-detail-container" id="data-analytics">
+          <div class="service-detail-content">
+            <h3>Data Analytics Services</h3>
+            <p class="text-justified">
+              In today's data-driven business environment, effective data
+              analytics can provide valuable insights and competitive
+              advantages. Kampag offers comprehensive data analytics services to
+              help businesses harness the power of their data assets and make
+              informed decisions.
+            </p>
+            <p class="text-justified">Our data analytics offerings include:</p>
+            <ul>
+              <li>Data Strategy Development</li>
+              <li>Business Intelligence Solutions</li>
+              <li>Big Data Implementation & Management</li>
+              <li>Predictive Analytics</li>
+              <li>Data Visualization & Reporting</li>
+              <li>Data Warehousing & Integration</li>
+              <li>Custom Analytics Applications</li>
+              <li>Data Quality Assessment & Enhancement</li>
+              <li>Machine Learning Implementation</li>
+              <li>Real-time Analytics Solutions</li>
+              <li>Performance & KPI Dashboards</li>
+            </ul>
+            <p class="text-justified">
+              Our team of data specialists combines technical expertise with
+              business acumen to deliver analytics solutions that provide
+              tangible value. We work with a variety of data platforms and
+              tools, including Microsoft Power BI, Tableau, SQL Server, Oracle,
+              and open-source technologies, to create customized analytics
+              solutions that meet your specific business requirements.
+            </p>
+            <p class="text-justified">
+              Whether you're looking to implement a new business intelligence
+              platform, optimize your existing data infrastructure, or develop
+              advanced analytics capabilities, Kampag has the knowledge and
+              experience to help you transform your data into actionable
+              insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Looking for the Best IT Business Solutions?</h2>
+        <p>
+          Let us help you transform your business with our comprehensive IT
+          services and solutions.
+        </p>
+        <div style="margin-top: 30px">
+          <a href="contact.html" class="btn-primary">CONTACT US</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img
+                src="images/kampog-Logo-01.png"
+                alt="Kampag comprehensive IT services"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              Kampag comprehensive IT services outsourcing is the perfect fit
+              for our clients. Our broad expertise expands the IT capabilities
+              of these companies, giving them technology that fits their
+              business and supports their business success and growth.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <div class="underline"></div>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <div class="underline"></div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p><a href="mailto:info@kampag.co.uk">info@kampag.co.uk</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                <a
+                  href="https://maps.google.com/?q=Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT"
+                  target="_blank"
+                >
+                  Unit 5, 101-103 Furtherwick Road, Canvey Island Essex, SS8 7AT
+                </a>
+              </p>
+            </div>
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Kampag IT Services. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Services - Kampag IT Services",
+        "description": "Explore Kampag IT Services' comprehensive range of solutions including technical consulting, cloud solutions, corporate relocation, and data analytics.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Kampag IT Services",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "images/kampog-Logo-01.png"
+          }
+        },
+        "url": "https://kampag.co.uk/services.html",
+        "offers": {
+          "@type": "Offer",
+          "itemOffered": [
+            {
+              "@type": "Service",
+              "name": "Technical Consulting",
+              "description": "Expert technical consulting services for businesses of all sizes."
+            },
+            {
+              "@type": "Service",
+              "name": "Cloud Solutions",
+              "description": "Comprehensive cloud services to enhance operational efficiency."
+            },
+            {
+              "@type": "Service",
+              "name": "Corporate Relocation",
+              "description": "IT relocation services to ensure a smooth transition."
+            },
+            {
+              "@type": "Service",
+              "name": "Data Analytics",
+              "description": "Data analytics services to help businesses harness their data assets."
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Service tabs JavaScript -->
+    <script>
+      function showService(serviceId) {
+        // Hide all service containers
+        const serviceContainers = document.querySelectorAll(
+          ".service-detail-container"
+        );
+        serviceContainers.forEach((container) => {
+          container.style.display = "none";
+        });
+
+        // Show the selected service container
+        document.getElementById(serviceId).style.display = "block";
+
+        // Update active button class
+        const buttons = document.querySelectorAll(".category-button");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Add active class to clicked button
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
